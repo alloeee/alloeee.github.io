@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Задание 1</title>
+    <meta charset="UTF-8">
+</head>
+    <body>
+    <h1>Маркированный список гиперссылок</h1>
+    <a id="top"></a>
+    <ul>
+        <li><a href="http://kubsu.ru/" title="Переход на сайт КубГУ">КубГУ</a></li>
+        <li><a href="https://kubsu.ru/">КубГУ (HTTPS)</a></li>
+        <li><a href="https://kubsu.ru/"> <img src="flower.jpg" alt="Цветок" style="width:600px"> </a></li>
+        <li><a href="/internal/">Сокращенная внутренняя ссылка</a></li>
+        <li><a href="/">Внутренняя ссылка</a></li>
+        <li><a href="#top">Вернуться наверх</a></li>
+        <li><a href="https://kubsu.ru/?faculty=fctipm&area=mo&group=22">Три параметра</a></li>
+        <li><a href="https://moodle.kubsu.ru/course/view.php?id=780">Разработка пользовательского Web-интерфейса</a></li>
+        <li><a href="./">Текущий каталог</a></li>
+        <li><a href="about/">Каталог about</a></li>
+        <li><a href="../">Каталог уровнем выше</a></li>
+        <li><a href="../../">Каталог на 2 уровня выше</a></li>
+        <li><p>Чтобы узнать больше о поступлении посетите <a href="https://kubsu.ru">официальный сайт</a> КубГУ</p></li>
+        <li><a href="https://ru.wikipedia.org/wiki/Кубанский_государственный_университет#Факультеты">Факультеты КубГУ</a></li>
+        <li>
+            <img src="Kubsumap.png" usemap="#image-map" alt="Удобные ссылки КубГУ">
+            <map name="image-map">
+                <area shape="rect" href="https://kubsu.ru/" coords="596,39,1094,522" alt="Поступление в КубГУ" title="Поступление в КубГУ">
+                <area shape="circle" href="https://www.kubsu.ru/news" coords="303,244,213" alt="Новости КубГУ" title="Новости КубГУ">
+            </map>
+        </li>
+        <li><a href="">Пустой href</a></li>
+        <li><a>Ссылка без href</a></li>
+        <li><a href="https://kubsu.ru" rel="nofollow">Запрет перехода поисковикам на КубГУ</a></li>
+        <li><!--<noindex>--><a href="https://kubsu.ru">КубГУ(запрет на индексацию Яндекса)</a><!--</noindex>--></li>
+        <li><a href="ftp://student123:123@kubsu.ru/fctipm/schedule">Ссылка на файл на сервере FTP с авторизацией</a></li>
+    </ul>
+
+
+
+    <ol>
+        <li><a href="https://kubsu.ru/" title="Переход на сайт КубГУ для подачи документов">Как подать документы в КубГУ</a></li>
+        <li><a href="https://www.kubsu.ru/index.php" title="Главная страница официального сайта Кубанского государственного университета -">Официальный сайт КубГУ</a></li>
+        <li><a href="https://www.kubsu.ru/news" title="Последние новости и события из жизни Кубанского государственного университета">Новости КубГУ</a></li>
+    </ol>
+
+    <h1>Форма</h1>
+    <form action="/" method="POST">
+        <label>
+            Поле для ввода Ф.И.О:
+            <br>
+            <input type="text" name="field-fio" placeholder="Шаршак Артём Иванович" required>
+        </label>
+        <br>
+        <label>
+            Поле для ввода номера телефона:
+            <br>
+            <input type="tel" name="field-number" placeholder="+7-(987)-654-32-10" required>
+        </label>
+        <br>
+        <label>
+            Поле для ввода e-mail:
+            <br>
+            <input type="email" name="field-email" placeholder="example@yandex.ru" required>
+        </label>
+        <br>
+        <label>
+            Поле для ввода даты рождения:
+            <br>
+            <input type="date" name="field-date" required>
+        </label>
+        <br>
+        Выберите пол
+        <br>
+        <label>
+            <input type="radio" name="radio-gender" value="male" required>
+            Мужской
+        </label>
+        <label>
+            <input type="radio" name="radio-gender" value="female" required>
+            Женский
+        </label>
+        <br>
+        Выберите любимый язык программирования
+        <br>
+        <label>
+            <select name="field-programming-languages[]" multiple size="8" required>
+                <option value="pascal">Pascal</option>
+                <option value="c">C</option>
+                <option value="c++">C++</option>
+                <option value="javascript">JavaScript</option>
+                <option value="php">PHP</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="haskel">Haskel</option>
+                <option value="clojure">Clojure</option>
+                <option value="prolog">Prolog</option>
+                <option value="scala">Scala</option>
+            </select>
+        </label>
+        <br>
+        <label>
+            Опишите краткую биографию:
+            <br>
+            <textarea name="field-biography" placeholder="Опишите свою биографию" required></textarea>
+        </label>
+        <br>
+        <label>
+            <input name="field-check" type="checkbox" required>
+            С контрактом ознакомлен(а)
+        </label>
+        <br>
+        <label>
+            <input value="Сохранить" type="submit">
+        </label>
+    </form>
+</body>
+</html>
